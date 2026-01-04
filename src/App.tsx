@@ -1,10 +1,14 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Dashboard from './components/Dashboard'
 import { ToDoApp } from './components/ToDoApp'
 
 function App() {
   return (
-      <Dashboard />
+     <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="*" element={<Dashboard />} />
+    </Routes>
   )
 }
 
